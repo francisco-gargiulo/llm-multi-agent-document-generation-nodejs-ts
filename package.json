@@ -1,0 +1,19 @@
+{
+  "name": "llm-multi-agent-document-generation-nodejs-ts",
+  "version": "0.0.1",
+  "description": "Enhancing Document Creation with LLMs",
+  "main": "index.ts",
+  "scripts": {
+    "start": "OPENAI_API_KEY=<your-api-key> NODE_OPTIONS=--no-deprecation ts-node index.ts"
+  },
+  "keywords": [],
+  "author": "Francisco Gargiulo",
+  "license": "ISC",
+  "dependencies": {
+    "openai": "^4.28.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "typescript": "^5.3.3"
+  }
+}

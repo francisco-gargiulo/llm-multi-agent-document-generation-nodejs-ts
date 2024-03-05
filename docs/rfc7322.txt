@@ -1,0 +1,577 @@
+                            RFC Style Guide
+
+Abstract
+
+   This document describes the fundamental and unique style conventions
+   and editorial policies currently in use for the RFC Series.  It
+   captures the RFC Editor's basic requirements and offers guidance
+   regarding the style and structure of an RFC.  Additional guidance is
+   captured on a website that reflects the experimental nature of that
+   guidance and prepares it for future inclusion in the RFC Style Guide.
+   This document obsoletes RFC 2223, "Instructions to RFC Authors".
+   
+4. Structure of an RFC
+
+   A published RFC will largely contain the elements in the following
+   list.  Some of these sections are required, as noted.  Those sections
+   marked with "*" will be supplied by the RFC Editor during the
+   editorial process when necessary.  Sections are allowed to contain
+   nothing but subsections.  The rules for each of these elements are
+   described in more detail below.
+
+      First-page header                      * [Required]
+      Title                                    [Required]
+      Abstract                                 [Required]
+      RFC Editor or Stream Note              * [Upon request]
+      Status of This Memo                    * [Required]
+      Copyright Notice                       * [Required]
+      Table of Contents                      * [Required]
+      Body of the Memo                         [Required]
+        1.  Introduction                       [Required]
+        2.  Requirements Language (RFC 2119)
+        3.  ...
+            MAIN BODY OF THE TEXT
+        6.  ...
+        7.  IANA Considerations                [Required in I-D]
+        8.  Internationalization Considerations
+        9.  Security Considerations            [Required]
+        10.  References
+        10.1.  Normative References
+        10.2.  Informative References
+        Appendix A.
+        Appendix B.
+      Acknowledgements
+      Contributors
+      Author's Address                         [Required]
+
+   Within the body of the memo, the order shown above is strongly
+   recommended.  Exceptions may be questioned.  Outside the body of the
+   memo, the order above is required.  The section numbers above are for
+   illustrative purposes; they are not intended to correspond to
+   required numbering in an RFC.
+
+   The elements preceding the body of the memo should not be numbered.
+   Typically, the body of the memo will have numbered sections and the
+   appendices will be labeled with letters.  Any sections that appear
+   after the appendices should not be numbered or labeled (e.g., see
+   "Contributors" above).
+
+4.1.  First-Page Header
+
+   Headers will follow the format described in "RFC Streams, Headers,
+   and Boilerplates" [RFC5741] and its successors.  In addition, the
+   following conventions will apply.
+
+4.1.1.  Author/Editor
+
+   The determination of who should be listed as an author or editor on
+   an RFC is made by the stream.
+
+   The author's name (initial followed by family name) appears on the
+   first line of the heading.  Some variation, such as additional
+   initials or capitalization of family name, is acceptable.  Once the
+   author has selected how their name should appear, they should use
+   that display consistently in all of their documents.
+
+   The total number of authors or editors on the first page is generally
+   limited to five individuals and their affiliations.  If there is a
+   request for more than five authors, the stream-approving body needs
+   to consider if one or two editors should have primary responsibility
+   for this document, with the other individuals listed in the
+   Contributors or Acknowledgements section.  There must be a direct
+   correlation of authors and editors in the document header and the
+   Authors' Addresses section.  These are the individuals that must sign
+   off on the document during the AUTH48 process and respond to
+   inquiries, such as errata.
+
+4.1.2.  Organization
+
+   The author's organization is indicated on the line following the
+   author's name.
+
+   For multiple authors, each author name appears on its own line,
+   followed by that author's organization.  When more than one author is
+   affiliated with the same organization, the organization can be
+   "factored out," appearing only once following the corresponding
+   Author lines.  However, such factoring is inappropriate when it would
+   force an unacceptable reordering of author names.
+
+   If an author cannot or will not provide an affiliation for any
+   reason, "Independent", "Individual Contributor", "Retired", or some
+   other term that appropriately describes the author's affiliation may
+   be used.  Alternatively, a blank line may be included in the document
+   header when no affiliation is provided.
+
+4.1.3.  "ISSN: 2070-1721"
+
+   The RFC Series has been assigned an International Standard Serial
+   Number of 2070-1721 [ISO3297].  It will be included by the
+   RFC Editor.
+
+4.1.4.  Updates and Obsoletes
+
+   When an RFC obsoletes or updates a previously published RFC or RFCs,
+   this information is included in the document header.  For example:
+
+      "Updates: nnnn" or "Updates: nnnn, ..., nnnn"
+
+      "Obsoletes: nnnn" or "Obsoletes: nnnn, ... , nnnn"
+
+   If the document updates or obsoletes more than one document, numbers
+   will be listed in ascending order.
+
+4.2.  Full Title
+
+   The title must be centered below the rest of the heading, preceded by
+   two blank lines and followed by one blank line.
+
+   Choosing a good title for an RFC can be a challenge.  A good title
+   should fairly represent the scope and purpose of the document without
+   being either too general or too specific and lengthy.
+
+   Abbreviations in a title must generally be expanded when first
+   encountered (see Section 3.6 for additional guidance on
+   abbreviations).
+
+   It is often helpful to follow the expansion with the parenthesized
+   abbreviation, as in the following example:
+
+                          Encoding Rules for the
+          Common Routing Encapsulation Extension Protocol (CREEP)
+
+   The RFC Editor recommends that documents describing a particular
+   company's private protocol should bear a title of the form "Foo's ...
+   Protocol" (where Foo is a company name), to clearly differentiate it
+   from a protocol of more general applicability.
+
+4.3.  Abstract Section
+
+   Every RFC must have an Abstract that provides a concise and
+   comprehensive overview of the purpose and contents of the entire
+   document, to give a technically knowledgeable reader a general
+   overview of the function of the document.
+
+   Composing a useful Abstract generally requires thought and care.
+   Usually, an Abstract should begin with a phrase like "This memo ..."
+   or "This document ..."  A satisfactory Abstract can often be
+   constructed in part from material within the Introduction section,
+   but an effective Abstract may be shorter, less detailed, and perhaps
+   broader in scope than the Introduction.  Simply copying and pasting
+   the first few paragraphs of the Introduction is allowed, but it may
+   result in an Abstract that is both incomplete and redundant.  Note
+   also that an Abstract is not a substitute for an Introduction; the
+   RFC should be self-contained as if there were no Abstract.
+
+   Similarly, the Abstract should be complete in itself.  It will appear
+   in isolation in publication announcements and in the online index of
+   RFCs.  Therefore, the Abstract must not contain citations.
+
+4.4.  RFC Editor or Stream Notes Section
+
+   A stream-approving body may approve the inclusion of an editorial
+   note to explain anything unusual about the process that led to the
+   document's publication or to note a correction.  In this case, a
+   stream note section will contain such a note.
+
+   Additionally, an RFC Editor Note section may contain a note inserted
+   by the RFC Editor to highlight special circumstances surrounding
+   an RFC.
+
+4.5.  Status of This Memo Section
+
+   The RFC Editor will supply an appropriate "Status of This Memo" as
+   defined in RFC 5741 [RFC5741] and "Format for RFCs in the IAB Stream"
+   [IAB-FORM].
+
+4.6.  Copyright, Licenses, and IPR Boilerplate Section
+
+   The full copyright and license notices are available on the IETF
+   Trust Legal Provisions documents website [IETF-TRUST].
+
+4.7.  Table of Contents Section
+
+   A Table of Contents (TOC) is required in all RFCs.  It must be
+   positioned after the Copyright Notice and before the Introduction.
+
+4.8.  Body of the Memo
+
+   Following the TOC is the body of the memo.
+
+   Each RFC must include an Introduction section that (among other
+   things) explains the motivation for the RFC and (if appropriate)
+   describes the applicability of the document, e.g., whether it
+   specifies a protocol, provides a discussion of some problem, is
+   simply of interest to the Internet community, or provides a status
+   report on some activity.  The body of the memo and the Abstract must
+   be self-contained and separable.  This may result in some duplication
+   of text between the Abstract and the Introduction; this is
+   acceptable.
+
+4.8.1.  Introduction Section
+
+   The Introduction section should always be the first section following
+   the TOC (except in the case of MIB module documents).  While
+   "Introduction" is recommended, authors may choose alternate titles
+   such as "Overview" or "Background".  These alternates are acceptable.
+
+   For MIB module documents, common practice has been for "The
+   Internet-Standard Management Framework" [MIB-BOILER] text to appear
+   as Section 1.
+
+4.8.2.  Requirements Language Section
+
+   Some documents use certain capitalized words ("MUST", "SHOULD", etc.)
+   to specify precise requirement levels for technical features.
+   RFC 2119 [BCP14] defines a default interpretation of these
+   capitalized words in IETF documents.  If this interpretation is used,
+   RFC 2119 must be cited (as specified in RFC 2119) and included as a
+   normative reference.  Otherwise, the correct interpretation must be
+   specified in the document.
+
+   This section must appear as part of the body of the memo (as defined
+   by this document).  It must appear as part of, or subsequent to, the
+   Introduction section.
+
+   These words are considered part of the technical content of the
+   document and are intended to provide guidance to implementers about
+   specific technical features, generally governed by considerations of
+   interoperability.  RFC 2119 says:
+
+      Imperatives of the type defined in this memo must be used with
+      care and sparingly.  In particular, they MUST only be used where
+      it is actually required for interoperation or to limit behavior
+      which has potential for causing harm (e.g., limiting
+      retransmisssions)  For example, they must not be used to try to
+      impose a particular method on implementers where the method is not
+      required for interoperability.
+
+4.8.3.  IANA Considerations Section
+
+   For guidance on how to register IANA-related values or create new
+   registries to be managed by IANA, see "Guidelines for Writing an IANA
+   Considerations Section in RFCs" [BCP26].
+
+   The RFC Editor will update text accordingly after the IANA
+   assignments have been made.  It is helpful for authors to clearly
+   identify where text should be updated to reflect the newly assigned
+   values.  For example, the use of "TBD1", "TBD2", etc., is recommended
+   in the IANA Considerations section and in the body of the memo.
+
+   If the authors have provided values to be assigned by IANA, the
+   RFC Editor will verify that the values inserted by the authors match
+   those that have actually been registered on the IANA site.  When
+   writing a given value, consistent use of decimal or hexadecimal is
+   recommended.
+
+   If any of the IANA-related information is not clear, the RFC Editor
+   will work with IANA to send queries to the authors to ensure that
+   assignments and values are properly inserted.
+
+   The RFC Editor will remove an IANA Considerations section that says
+   there are no IANA considerations (although such a section is required
+   in the Internet-Draft preceding the RFC).
+
+4.8.4.  Internationalization Considerations Section
+
+   All RFCs that deal with internationalization issues should have a
+   section describing those issues; see "IETF Policy on Character Sets
+   and Languages" [BCP18], Section 6, for more information.
+
+4.8.5.  Security Considerations Section
+
+   All RFCs must contain a section that discusses the security
+   considerations relevant to the specification; see "Guidelines for
+   Writing RFC Text on Security Considerations" [BCP72] for more
+   information.
+
+   Note that additional boilerplate material for RFCs containing MIB and
+   YANG modules also exists.  See "Security Guidelines for IETF MIB
+   Modules" [MIB-SEC] and "yang module security considerations"
+   [YANG-SEC] for details.
+
+4.8.6.  References Section
+
+   The reference list is solely for recording reference entries.
+   Introductory text is not allowed.
+
+   The RFC style allows the use of any of a variety of reference styles,
+   as long as they are used consistently within a document.  However,
+   where necessary, some reference styles have been described for use
+   within the Series.  See the examples in this document.
+
+   The RFC Editor ensures that references to other RFCs refer to the
+   most current RFC available on that topic (unless provided with a
+   reason not to do so).  When referring to an obsoleted document, it is
+   common practice to also refer to the most recent version.
+
+   A reference to an RFC that has been assigned an STD [RFC1311], BCP
+   [RFC1818], or FYI [FYI90] sub-series number must include the
+   sub-series number of the document.  Note that the FYI series was
+   ended by RFC 6360.  RFCs that were published with an FYI sub-series
+   number and still maintain the FYI number must include the sub-series
+   number in the reference.
+
+   Reference lists must indicate whether each reference is normative or
+   informative, where normative references are essential to implementing
+   or understanding the content of the RFC and informative references
+   provide additional information.  More information about normative and
+   informative references may be found in the IESG's statement
+   "Normative and Informative References" [REFS].  When both normative
+   and informative references exist, the references section should be
+   split into two subsections:
+
+      s.  References
+
+      s.1.  Normative References
+
+               xxx
+               ...
+               xxx
+
+      s.2.  Informative References
+
+               xxx
+               ...
+               xxx
+
+   References will generally appear in alphanumeric order by citation
+   tag.  Where there are only normative or informative references, no
+   subsection is required; the top-level section should say "Normative
+   References" or "Informative References".
+
+   Normative references to Internet-Drafts will cause publication of the
+   RFC to be suspended until the referenced draft is also ready for
+   publication; the RFC Editor will then update the entry to refer to
+   the RFC and publish both documents simultaneously.
+
+4.8.6.1.  URIs in RFCs
+
+   The use of URIs in references is acceptable, as long as the URI is
+   the most stable (i.e., unlikely to change and expected to be
+   continuously available) and direct reference possible.  The URI will
+   be verified as valid during the RFC editorial process.
+
+   If a dated URI (one that includes a timestamp for the page) is
+   available for a referenced web page, its use is required.
+
+   Note that URIs may not be the sole information provided for a
+   reference entry.
+
+4.8.6.2.  Referencing RFCs
+
+   The following format is required for referencing RFCs.  Note the
+   ordering for multiple authors: the format of the name of the last
+   author listed is different than that of all previous authors in the
+   list.
+
+   For one author or editor:
+
+      [RFCXXXX] Last name, First initial., Ed. (if applicable),
+                "RFC Title", Sub-series number (if applicable),
+                RFC number, Date of publication,
+                <http://www.rfc-editor.org/info/rfc#>.
+
+     Example:
+
+      [RFC3080] Rose, M., "The Blocks Extensible Exchange
+                Protocol Core", RFC 3080, March 2001,
+                <http://www.rfc-editor.org/info/rfc3080>.
+
+   For two authors or editors:
+
+      [RFCXXXX] Last name, First initial., Ed. (if applicable)
+                and First initial. Last name, Ed. (if applicable),
+                "RFC Title", Sub-series number (if applicable),
+                RFC number, Date of publication,
+                <http://www.rfc-editor.org/info/rfc#>.
+
+     Example:
+
+      [RFC6323] Renker, G. and G. Fairhurst, "Sender RTT
+                Estimate Option for the Datagram Congestion
+                Control Protocol (DCCP)", RFC 6323, July 2011,
+                <http://www.rfc-editor.org/info/rfc6323>.
+
+   For three or more authors or editors:
+
+      [RFCXXXX] Last name, First initial., Ed. (if applicable),
+                Last name, First initial., Ed. (if applicable),
+                and First initial. Last name, Ed. (if applicable),
+                "RFC Title", Sub-series number (if applicable),
+                RFC number, Date of publication,
+                <http://www.rfc-editor.org/info/rfc#>.
+
+     Example:
+
+      [RFC6429] Bashyam, M., Jethanandani, M., and A. Ramaiah,
+                "TCP Sender Clarification for Persist
+                Condition", RFC 6429, December 2011,
+                <http://www.rfc-editor.org/info/rfc6429>.
+
+4.8.6.3.  Referencing STDs and BCPs
+
+   Internet Standards (STDs) and Best Current Practices (BCPs) may
+   consist of a single RFC or multiple RFCs.  When an STD or BCP that
+   contains multiple RFCs is referenced, the reference entry should
+   include ALL of the RFCs comprising that sub-series.  The authors
+   should refer to specific RFC numbers as part of the text (not as
+   citations) and cite the sub-series number.  Inclusion of the URI to
+   the STD or BCP info page (see Section 3.2.3 of [RFC5741]) is
+   recommended.  The text should appear as follows:
+
+      See RFC 1034 [STD13].
+
+   For an STD or BCP that contains one RFC:
+
+      [STDXXX]  Last name, First initial., Ed. (if applicable),
+                "RFC Title", Sub-series number, RFC number, Date of
+                publication, <http://www.rfc-editor.org/info/std#>.
+
+     Example:
+
+      [STD72]   Gellens, R. and J. Klensin, "Message Submission
+                for Mail", STD 72, RFC 6409, November 2011,
+                <http://www.rfc-editor.org/info/std72>.
+
+   For an STD or BCP that contains two or more RFCs:
+
+      [STDXXX]  Last name, First initial., Ed. (if applicable),
+                "RFC Title", Sub-series number, RFC number, Date of
+                publication.
+
+                Last name, First initial., Ed. (if applicable)
+                and First initial. Last name, Ed. (if applicable),
+                "RFC Title", Sub-series number, RFC number, Date of
+                publication.
+
+                <http://www.rfc-editor.org/info/std#>
+
+     Example:
+
+      [STD13]    Mockapetris, P., "Domain names - concepts and
+                 facilities", STD 13, RFC 1034, November 1987.
+
+                 Mockapetris, P., "Domain names - implementation and
+                 specification", STD 13, RFC 1035, November 1987.
+
+                 <http://www.rfc-editor.org/info/std13>
+
+4.8.6.4.  Referencing Internet-Drafts
+
+   References to Internet-Drafts may only appear as informative
+   references.  Given that several revisions of an I-D may be produced
+   in a short time frame, references must include the posting date
+   (month and year), the full Internet-Draft file name (including the
+   version number), and the phrase "Work in Progress".  Authors may
+   reference multiple versions of an I-D.  If the referenced I-D was
+   also later published as an RFC, then that RFC must also be listed.
+
+      [SYMBOLIC-TAG]  Last name, First initial., Ed. (if applicable)
+                      and First initial. Last name, Ed. (if
+                      applicable), "I-D Title", Work in Progress,
+                      draft-string-NN, Month Year.
+
+     Example:
+
+      [RFC-STYLE] Flanagan, H. and S. Ginoza, "RFC Style Guide",
+                  Work in Progress, draft-flanagan-style-01,
+                  June 2013.
+
+4.8.6.5.  Referencing Errata
+
+   The following format is required when a reference to an erratum
+   report is necessary:
+
+      [ErrNumber]  RFC Errata, Erratum ID number, RFC number.
+
+      [Err1912]  RFC Errata, Erratum ID 1912, RFC 2978.
+
+4.8.6.6.  Referencing Other Standards Development Organizations (SDOs)
+
+   The following format is suggested when referencing a document or
+   standard from another SDO in which authors are listed:
+
+      [SYMBOLIC-TAG]
+              Last name, First initial. and First initial. Last name,
+              "Document Title", Document reference number, Date of
+              publication, <URI if available>.
+
+      [W3C.REC-xml11]
+              Bray, T., Paoli, J., Sperberg-McQueen, C., Maler, E.,
+              Yergeau, F., and J.  Cowan, "Extensible Markup Language
+              (XML) 1.1 (Second Edition)", W3C Recommendation
+              REC-xml11-20060816, August 2006,
+              <http://www.w3.org/TR/2006/REC-xml11-20060816>.
+
+   Note that the order of authors in the list is the same as the order
+   shown on the actual document and that the common, abbreviated form of
+   the SDO is used.
+
+   Alternatively, when no list of authors is available, the following
+   format is recommended:
+
+      [SYMBOLIC-TAG]  Organization, "Document Title", Document
+                      reference number, Date of publication,
+                      <URI if available>.
+
+     Example:
+
+      [IEEE802.1Q]  IEEE, "Local and Metropolitan Area
+                    Networks -- Media Access Control (MAC)
+                    Bridges and Virtual Bridged Local Area
+                    Networks", IEEE Std 802.1Q-2011, August 2011,
+                    <http://standards.ieee.org/findstds/standard/
+                    802.1Q-2011.html>.
+
+4.9.  Appendices Section
+
+   The RFC Editor recommends placing references before the Appendices.
+   Appendices should be labeled as "Appendix A.  Title", "A.1.  Title",
+   "Appendix B.  Title", etc.
+
+4.10.  Acknowledgements Section
+
+   This optional section may be used instead of, or in addition to, a
+   Contributors section.  It is often used by authors to publicly thank
+   those who have provided feedback regarding a document and to note any
+   documents from which text was borrowed.
+
+4.11.  Contributors Section
+
+   This optional section acknowledges those who have made significant
+   contributions to the document.
+
+   In a similar fashion to the Author's Address section, the RFC Editor
+   does not make the determination as to who should be listed as a
+   contributor to an RFC.  The determination of who should be listed as
+   a contributor is made by the stream.
+
+   The Contributors section may include brief statements about the
+   nature of particular contributions ("Sam contributed Section 3"), and
+   it may also include affiliations of listed contributors.  At the
+   discretion of the author(s), contact addresses may also be included
+   in the Contributors section, for those contributors whose knowledge
+   makes them useful future contacts for information about the RFC.  The
+   format of any contact information should be similar to the format of
+   information in the Author's Address section.
+
+4.12.  "Author's Address" or "Authors' Addresses" Section
+
+   This required section gives contact information for the author(s)
+   listed in the first-page header.
+
+   Contact information must include a long-lived email address and
+   optionally may include a postal address and/or telephone number.  If
+   the postal address is included, it should include the country name,
+   using the English short name listed by the ISO 3166 Maintenance
+   Agency [ISO_OBP].  The purpose of this section is to
+   (1) unambiguously define author identity (e.g., the John Smith who
+   works for FooBar Systems) and (2) provide contact information for
+   future readers who have questions or comments.
+
+   The practice of munged email addresses (i.e., altering an email
+   address to make it less readable to bots and web crawlers to avoid
+   spam) is not appropriate in an archival document series.  Author
+   contact information is provided so that readers can easily contact
+   the author with questions and/or comments.  Address munging is not
+   allowed in RFCs.
